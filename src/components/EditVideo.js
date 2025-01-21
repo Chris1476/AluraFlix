@@ -30,7 +30,7 @@ function EditVideo() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const videos = JSON.parse(localStorage.getItem("videos")) || [];
-    const index = videos.findIndex((v) => v.title === video.title); // Aquí puedes encontrar un video por su título u otro criterio único
+    const index = videos.findIndex((v) => v.title === video.title); // Encontrar un video por su título u otro criterio único
     videos[index] = video; // Reemplazar el video editado
     localStorage.setItem("videos", JSON.stringify(videos));
     navigate("/"); // Redirigir a la lista de videos
