@@ -26,7 +26,7 @@ const Navbar = () => {
   );
 };
 
-// Función para manejar el menú en pantallas pequeñas (opcional)
+// Función para manejar el menú en pantallas pequeñas
 const toggleMenu = () => {
   const menu = document.querySelector('.navbar-menu');
   menu.classList.toggle('active'); // Activa o desactiva la visibilidad del menú
