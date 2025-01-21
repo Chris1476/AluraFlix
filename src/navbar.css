@@ -1,0 +1,73 @@
+  .navbar {
+    background-color: #f8f9fa; /* Color de fondo */
+    padding: 10px 20px; /* Espaciado de la barra */
+    position: sticky; /* Para que la barra se quede fija en la parte superior */
+    top: 0;
+    z-index: 1000; /* Asegura que la barra esté encima del contenido */
+  }
+  
+  /* Contenedor de la barra */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que el logo esté a la izquierda y el menú a la derecha */
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    height: 60px; /* Ajusta según el diseño */
+    width: auto; /* Mantiene la proporción original */
+  }
+  
+  /* Menú de navegación */
+  .navbar-menu {
+    display: flex;
+    gap: 20px;
+    margin-left: auto; /* Esto empuja el menú hacia la derecha */
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+  }
+  
+  /* Menú hamburguesa */
+  .navbar-toggler {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    display: none; /* Se ocultará en pantallas grandes */
+    z-index: 2000; /* Asegura que el menú hamburguesa esté por encima */
+  }
+  
+  /* Menú hamburguesa visible en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* Ocultar el menú en pantallas pequeñas */
+      position: absolute;
+      top: 60px; /* Justo debajo de la barra de navegación */
+      left: 0;
+      width: 100%;
+      background-color: #f8f9fa;
+      z-index: 1000; /* Asegura que el menú esté encima */
+    }
+  
+    .navbar-menu.active {
+      display: flex; /* Mostrar el menú cuando se active */
+      flex-direction: column; /* Organizar los enlaces de arriba a abajo */
+      gap: 10px; /* Espaciado entre los enlaces */
+    }
+  
+    .navbar-toggler {
+      display: block; /* Mostrar el botón de menú en pantallas pequeñas */
+    }
+  }

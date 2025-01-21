@@ -1,0 +1,39 @@
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  .video-card {
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  button {
+    margin-top: 2px;
+    padding: 2px;
+    cursor: pointer;
+  }
+
+  .btn-black {
+    background-color: black;
+    color: white; /* Para que el texto sea legible */
+    border-color: black; /* Opcional: bordes negros */
+  }
+  
+  .btn-black:hover {
+    background-color: #333; /* Un negro más claro para el hover */
+    color: white; /* Mantén el texto blanco */
+    text-decoration: none; /* Elimina el subrayado, si es un enlace */
+  }
+
+  .fixed-size {
+    height: 200px !important;
+    object-fit: cover !important;
+  }
